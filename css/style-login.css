@@ -356,4 +356,7 @@ input[type="checkbox"]::placeholder {
 }
 
 .checkbox {
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 85%;
 }
