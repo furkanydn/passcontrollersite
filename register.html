@@ -13,7 +13,7 @@
 <div class="wrapper fadeInDown">
 	<div id="formContent">
 		<!-- Tabs Titles -->
-		<h2 class="active"> Sign In </h2>
+		<h2 class="active"> Sign Up </h2>
 
 		<!-- Icon -->
 		<div class="fadeIn first">
@@ -24,7 +24,15 @@
 		<form>
 			<input type="email" id="login" class="fadeIn second" name="login" pattern=".@" placeholder="Mail Address" required>
 			<input type="password" id="password" class="fadeIn third" name="login" placeholder="Password" required>
-			<input type="submit" class="fadeIn fourth" value="Sign In">
+			<input type="password" id="repassword" class="fadeIn third" name="login" placeholder="Re Password" required>
+			<input type="phone" id="phone" class="fadeIn third" name="phone" placeholder="Phone Number"  maxlength="11" required><br>
+			<div class="checkbox">
+				<input type="checkbox" id="checkboxterm" class="fadeIn third" name="checkboxterm">I agree to the <a href="#Terms">Term Of Use</a><br>
+			</div>
+			<div class="checkbox">
+				<input type="checkbox" id="checkboxmail" class="fadeIn third" name="checkboxmail">I want to receive emails.<br>
+			</div>
+			<input type="submit" class="fadeIn fourth" value="Sign Up">
 		</form>
 
 		<!-- Remind Passowrd -->
