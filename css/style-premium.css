@@ -1013,6 +1013,7 @@ a {
     text-transform: capitalize;
     font-weight: 400;
     display: inline-block;
+    text-decoration: none !important;
     padding: 34px 0;
     font-family: "Poppins", sans-serif;
     position: relative;
