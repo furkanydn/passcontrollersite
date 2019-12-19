@@ -7,7 +7,7 @@
     <title>Password Controller - Account</title>
 
     <link rel="icon" type="image/png" href="img/favicon.png">
-    <link href="css/style-account.css" rel="stylesheet" media="all">
+    <link href="css/style-settings.css" rel="stylesheet" media="all">
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="css/font-awesome.min.css" rel="stylesheet" media="all">
     <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
@@ -119,7 +119,7 @@
                                                     <i class="zmdi zmdi-account"></i>Account</a>
                                             </div>
                                             <div class="account-dropdown__item">
-                                                <a href="#">
+                                                <a href="settings.html">
                                                     <i class="zmdi zmdi-settings"></i>Setting</a>
                                             </div>
                                             <div class="account-dropdown__item">
@@ -145,15 +145,96 @@
     </header>
 
     <section class="account">
-        <div class="container">
+        <div style="max-width: 80%;" class="container">
             <div class="account-content">
                 <div class="account-form">
                     <h2 class="form-title">Settings</h2>
                     <div class="form-group">
-                        <input type="checkbox" name="agree-mail" id="agree-mail" class="agree-term" />
-                        <label for="agree-mail" class="label-agree-mail"><span><span></span></span>I want to receive emails.</label>
+                        <ul class="tg-list">
+                            <li class="tg-list-item">
+                                <input class="tgl tgl-flip" id="cb5" type="checkbox"/>
+                                <label class="tgl-btn" data-tg-off="Nope" data-tg-on="Yeah!" for="cb5"></label>
+                            </li>
+                            <label class="label-agree-mail" style="margin-bottom: 20px;margin-left: 10px;"><span><span></span></span>I want to receive emails.</label>
+                        </ul>
                     </div>
-
+                    <div class="col-lg-9" style="max-width: 100%">
+                        <div class="table-responsive table--no-card m-b-40">
+                            <table class="table table-borderless table-striped table-earning">
+                                <label class="refreshtable fa-refresh" onclick="alert('Table Refreshed')"></label>
+                                <thead>
+                                <tr>
+                                    <th><input id="box" type="checkbox" onclick="return false;" /><label for="box" style="color: #ffffff;"></label></th>
+                                    <th>Date</th>
+                                    <th>Browser</th>
+                                    <th class="text-right">Explanation</th>
+                                    <th class="text-right">Service</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><input id="box3" type="checkbox" /><label for="box3"></label></td>
+                                    <td>2018-09-29 05:57</td>
+                                    <td>Chrome</td>
+                                    <td class="text-right">açıklama</td>
+                                    <td class="text-right">Max Mail</td>
+                                </tr>
+                                <tr>
+                                    <td><input id="box4" type="checkbox" /><label for="box4"></label></td>
+                                    <td>2018-09-28 01:22</td>
+                                    <td>Firefox</td>
+                                    <td class="text-right">açıklama iki</td>
+                                    <td class="text-right">Gmail</td>
+                                </tr>
+                                <tr>
+                                    <td><input id="box5" type="checkbox" /><label for="box5"></label></td>
+                                    <td>2018-09-27 02:12</td>
+                                    <td>Internet Explorer/ Edge</td>
+                                    <td class="text-right">açıkcası</td>
+                                    <td class="text-right">Outlook</td>
+                                </tr>
+                                <tr>
+                                    <td><input id="box6" type="checkbox" /><label for="box6"></label></td>
+                                    <td>2018-09-26 23:06</td>
+                                    <td>Safari</td>
+                                    <td class="text-right">gmail hacked</td>
+                                    <td class="text-right">Yahoo Mail</td>
+                                </tr>
+                                <tr>
+                                    <td><input id="box7" type="checkbox" /><label for="box7"></label></td>
+                                    <td>2018-09-25 19:03</td>
+                                    <td>Opera</td>
+                                    <td class="text-right">Hotmail mi kaldı</td>
+                                    <td class="text-right">Hotmail</td>
+                                </tr>
+                                <tr>
+                                    <td><input id="box8" type="checkbox" /><label for="box8"></label></td>
+                                    <td>2018-09-29 05:57</td>
+                                    <td>Vivaldi</td>
+                                    <td class="text-right">açıklama</td>
+                                    <td class="text-right">Böyle Bir Servis Yok</td>
+                                </tr>
+                                <tr>
+                                    <td><input id="box9" type="checkbox" /><label for="box9"></label></td>
+                                    <td>2018-09-24 19:10</td>
+                                    <td>Chromium</td>
+                                    <td class="text-right">açıklama</td>
+                                    <td class="text-right">Cilgin Mail</td>
+                                </tr>
+                                <tr>
+                                    <td><input id="box10" type="checkbox" /><label for="box10"></label></td>
+                                    <td>2018-09-22 00:43</td>
+                                    <td>Brave</td>
+                                    <td class="text-right">açıklama</td>
+                                    <td class="text-right">Gmail</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="form-group form-button">
+                        <input type="submit" name="save" id="save" class="form-submit" style="float: right;" value="Save"/>
+                    </div>
                 </div>
             </div>
         </div>
