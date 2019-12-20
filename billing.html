@@ -4,22 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Password Controller - Account</title>
+    <title>Password Controller - Billing</title>
 
     <link rel="icon" type="image/png" href="img/favicon.png">
-    <link href="css/style-account.css" rel="stylesheet" media="all">
+    <link href="css/style-billing.css" rel="stylesheet" media="all">
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="css/font-awesome.min.css" rel="stylesheet" media="all">
     <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
-    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
     <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
-    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
-    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
-    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
-    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
     <link href="css/style-profile.css" rel="stylesheet" media="all">
-    <link href="css/slicknav.css" rel="stylesheet" media="all">
 </head>
 <body>
 
@@ -152,74 +146,69 @@
     <section class="account">
         <div class="container">
             <div class="account-content">
-                <div class="account-form">
-                    <h2 class="form-title">Account</h2>
-                    <form method="POST" class="register-form" id="register-form">
-                        <div class="form-group">
-                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="name" id="name" minlength="3" placeholder="Name"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="email"><i class="zmdi zmdi-email"></i></label>
-                            <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" minlength="4" maxlength="50" placeholder="Email Address"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="email"><i class="zmdi zmdi-email"></i></label>
-                            <input type="email" name="email" id="reemail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" minlength="4" maxlength="50" placeholder="Confirm Email Address"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                            <input type="password" name="pass" id="pass" placeholder="Password"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                            <input type="password" name="pass" id="repass" placeholder="Repeat Password"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone"><i class="zmdi zmdi-phone"></i></label>
-                            <input type="text" name="phone" id="phone" minlength="4" maxlength="11" pattern="^\+?\d{0,11}" placeholder="Phone Number"/>
-                        </div>
-
-                    </form>
-                </div>
                 <div class="account-image">
-
-                    <div class="containerImage">
-                        <h1 style="font-size: 20px;float: right;margin-top: 50px;">Profile Image</h1>
-                        <div class="avatar-upload">
-                            <div class="avatar-edit">
-                                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-                                <label for="imageUpload"></label>
+                    <h2 class="form-title">Billing</h2>
+                    <div class="col-lg-9" style="max-width: 100%">
+                        <div class="table-responsive table--no-card m-b-40">
+                            <table class="table table-borderless table-striped table-earning">
+                                <thead>
+                                <tr>
+                                    <th>Payment Date</th>
+                                    <th>Card Number</th>
+                                    <th class="text-right">Package Type</th>
+                                    <th class="text-right">Price</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="text-left">2019-11-29 16:27</td>
+                                    <td class="text-left">1234-5678-9101-1121</td>
+                                    <td class="text-right">Medium</td>
+                                    <td class="text-right">$ 5.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">2019-12-16 13:42</td>
+                                    <td class="text-left">4016-4586-1594-4835</td>
+                                    <td class="text-right">Large</td>
+                                    <td class="text-right">$ 9.99</td>
+                                </tr>
+                                <tr>
+                                    <td>2019-12-18 12:32</td>
+                                    <td>1111-1111-2222-3333</td>
+                                    <td class="text-right">Small</td>
+                                    <td class="text-right">$ 2.99</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="form-container">
+                        <div id="card-front">
+                            <div id="image-container">
+                                <span id="amount">Paying: <strong>$9.99</strong></span>
+                                <span id="card-image"></span>
                             </div>
-                            <div class="avatar-preview">
-                                <div id="imagePreview" style="background-image: url(./img/logo.png);">
-                                </div>
+                            <label for="card-number">
+                                Card Number
+                            </label>
+                            <input type="text" id="card-number" style="font-size: 12px;" value="1234 5678 9101 1112" length="16" readonly="readonly">
+                            <div id="cardholder-container">
+                                <label for="card-holder">Card Holder
+                                </label>
+                                <input type="text" id="card-holder" style="font-size: 12px;" value="Fırat KAYA" readonly="readonly" />
+                            </div>
+                            <div id="exp-container">
+                                <label for="card-exp">
+                                    Expiration
+                                </label>
+                                <input id="card-month" type="text" style="font-size: 12px;" value="12" length="2" readonly="readonly">
+                                <input id="card-year" type="text" style="font-size: 12px;" value="22" length="2" readonly="readonly">
                             </div>
                         </div>
                     </div>
-
-                    <div class='pricing animated swing'>
-                        <div class='thumbnail animated pulse infinite'>
-                            <div class='fa fa-money'></div>
-                        </div>
-                        <div class='title'>Show Purchased</div>
-                        <div class='content'>
-                            <div class='sub-title'>$9.99 Per Year</div>
-                            <ul>
-                                <li><div class='fa fa-check-square' style="color: #00D363;"></div>120 Database Table Rows</li>
-                                <li><div class='fa fa-check-square' style="color: #00D363;"></div>15 Email Account Services</li>
-                                <li><div class='fa fa-check-square' style="color: #00D363;"></div>10 Encryption Algorithm</li>
-                                <li><div class='fa fa-check-square' style="color: #00D363;"></div>100 Different Products Integration</li>
-                                <li><div class='fa fa-check-square' style="color: #00D363;"></div>Unlimited Download PDF Format</li>
-                                <li><div class='fa fa-check-square' style="color: #00D363;"></div>24/7 Support</li>
-                            </ul>
-                            <a href='premium.html'>Change Plan</a>
-                        </div>
-                    </div>
-
 
                     <div class="form-group form-button">
-                        <input type="submit" name="signup" id="signup" class="form-submit" style="float: right;" value="Register"/>
+                        <input type="submit" name="signup" id="signup" class="form-submit" style="float: right;height: auto;" value="View All"/>
                     </div>
                 </div>
             </div>
@@ -229,18 +218,13 @@
 <script src="vendor/jquery-3.2.1.min.js"></script>
 <script src="vendor/bootstrap-4.1/popper.min.js"></script>
 <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
-<script src="vendor/slick/slick.min.js"></script>
-<script src="vendor/wow/wow.min.js"></script>
 <script src="vendor/animsition/animsition.min.js"></script>
 <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-<script src="vendor/counter-up/jquery.waypoints.min.js"></script>
-<script src="vendor/counter-up/jquery.counterup.min.js"></script>
 <script src="vendor/circle-progress/circle-progress.min.js"></script>
 <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-<script src="vendor/chartjs/Chart.bundle.min.js"></script>
-<script src="vendor/select2/select2.min.js"></script>
 <script src="js/profile-main.js"></script>
-<script src="js/profile-image.js"></script>
-<script src="js/profile-repeat-control.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script src="js/profile-billing.js"></script>
 </body>
 </html>
