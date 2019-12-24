@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Password Controller - Settings</title>
+    <title>Password Controller - Basic Table</title>
 
     <link rel="icon" type="image/png" href="img/favicon.png">
-    <link href="css/style-settings.css" rel="stylesheet" media="all">
-    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link href="css/basic-table.css" rel="stylesheet" media="all">
     <link href="css/font-awesome.min.css" rel="stylesheet" media="all">
     <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
     <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
@@ -145,95 +145,179 @@
     </header>
 
     <section class="account">
-        <div style="max-width: 80%;" class="container">
+        <div style="max-width: 94%;" class="container">
             <div class="account-content">
+                <div class="pop-up">
+                    <div class="contentx">
+                        <div class="containerx">
+                            <div class="dots">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <span id="closex" class="closex">Close</span>
+                            <div class="title">
+                                <h1>Basic Table</h1>
+                            </div>
+                            <div class="subscribe">
+                                <h1>* All field can not be blank</h1>
+                                <form>
+                                    <input type="number" minlength="1" maxlength="10" placeholder="Id">
+                                    <input type="text" placeholder="Type*">
+                                    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email*">
+                                    <input type="text" placeholder="Username*">
+                                    <input type="password" minlength="4" placeholder="Password*">
+                                    <input type="text"  placeholder="Explanations">
+                                    <input type="submit" placeholder="Send">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="account-form">
-                    <h2 class="form-title">Settings</h2>
+                    <h2 class="form-title">Basic Table</h2>
                     <div class="form-group">
-                        <ul class="tg-list">
-                            <li class="tg-list-item">
-                                <input class="tgl tgl-flip" id="cb5" type="checkbox"/>
-                                <label class="tgl-btn" data-tg-off="Nope" data-tg-on="Yeah!" for="cb5"></label>
-                            </li>
-                            <label class="label-agree-mail" style="margin-bottom: 20px;margin-left: 10px;"><span><span></span></span>I want to receive emails.</label>
-                        </ul>
+                        <button id="btn-add" class="btn-add"><span>Add New</span></button>
+                        <button id="btn-refresh" class="btn-refresh"><span>Refresh</span></button>
                     </div>
                     <div class="col-lg-9" style="max-width: 100%">
                         <div class="table-responsive table--no-card m-b-40">
                             <table class="table table-borderless table-striped table-earning">
-                                <label class="refreshtable fa-refresh" onclick="alert('Table Refreshed')"></label>
                                 <thead>
                                 <tr>
-                                    <th><input id="box" type="checkbox" onclick="return false;" /><label for="box" style="color: #ffffff;"></label></th>
-                                    <th>Date</th>
-                                    <th>Browser</th>
-                                    <th class="text-right">Explanation</th>
-                                    <th class="text-right">Service</th>
+                                    <th>Id</th>
+                                    <th>Type</th>
+                                    <th>Email</th>
+                                    <th>Username</th>
+                                    <th>Password</th>
+                                    <th>Explanation</th>
+                                    <th>Actions</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td><input id="box3" type="checkbox" /><label for="box3"></label></td>
-                                    <td>2018-09-29 05:57</td>
-                                    <td>Chrome</td>
-                                    <td class="text-right">açıklama</td>
-                                    <td class="text-right">Max Mail</td>
+                                    <td>001</td>
+                                    <td>Google</td>
+                                    <td>googleuser@google.com</td>
+                                    <td>googleuser</td>
+                                    <td>********<i class="zmdi zmdi-eye actions-eye"></i></td>
+                                    <td>Google Account</td>
+                                    <td class="text-right actions-td">
+                                        <span title="Edit"><i class="zmdi zmdi-edit actions-edit"></i></span>
+                                        <span title="Delete"><i class="zmdi zmdi-delete actions-delete"></i></span>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><input id="box4" type="checkbox" /><label for="box4"></label></td>
-                                    <td>2018-09-28 01:22</td>
-                                    <td>Firefox</td>
-                                    <td class="text-right">açıklama iki</td>
-                                    <td class="text-right">Gmail</td>
+                                    <td>002</td>
+                                    <td>Huawei</td>
+                                    <td>huelit@huawei.com</td>
+                                    <td>huelit</td>
+                                    <td>*********<i class="zmdi zmdi-eye actions-eye"></i></td>
+                                    <td>Huawei Account Id Pass</td>
+                                    <td class="text-right actions-td">
+                                        <span title="Edit"><i class="zmdi zmdi-edit actions-edit"></i></span>
+                                        <span title="Delete"><i class="zmdi zmdi-delete actions-delete"></i></span>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><input id="box5" type="checkbox" /><label for="box5"></label></td>
-                                    <td>2018-09-27 02:12</td>
-                                    <td>Internet Explorer/ Edge</td>
-                                    <td class="text-right">açıkcası</td>
-                                    <td class="text-right">Outlook</td>
+                                    <td>003</td>
+                                    <td>Facebook</td>
+                                    <td>faceboy@facebook.com</td>
+                                    <td>babyface</td>
+                                    <td>******<i class="zmdi zmdi-eye actions-eye"></i></td>
+                                    <td>Facebook Account</td>
+                                    <td class="text-right actions-td">
+                                        <span title="Edit"><i class="zmdi zmdi-edit actions-edit"></i></span>
+                                        <span title="Delete"><i class="zmdi zmdi-delete actions-delete"></i></span>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><input id="box6" type="checkbox" /><label for="box6"></label></td>
-                                    <td>2018-09-26 23:06</td>
-                                    <td>Safari</td>
-                                    <td class="text-right">gmail hacked</td>
-                                    <td class="text-right">Yahoo Mail</td>
+                                    <td>004</td>
+                                    <td>Twitter</td>
+                                    <td>twittergirl@twitter.com</td>
+                                    <td>bestff</td>
+                                    <td>**********<i class="zmdi zmdi-eye actions-eye"></i></td>
+                                    <td>Twitter Account</td>
+                                    <td class="text-right actions-td">
+                                        <span title="Edit"><i class="zmdi zmdi-edit actions-edit"></i></span>
+                                        <span title="Delete"><i class="zmdi zmdi-delete actions-delete"></i></span>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><input id="box7" type="checkbox" /><label for="box7"></label></td>
-                                    <td>2018-09-25 19:03</td>
-                                    <td>Opera</td>
-                                    <td class="text-right">Hotmail mi kaldı</td>
-                                    <td class="text-right">Hotmail</td>
+                                    <td>005</td>
+                                    <td>Password Controller</td>
+                                    <td>pass@passwordcontroller.com</td>
+                                    <td>hackerboy</td>
+                                    <td>**********<i class="zmdi zmdi-eye actions-eye"></i></td>
+                                    <td>Password Controller Account</td>
+                                    <td class="text-right actions-td">
+                                        <span title="Edit"><i class="zmdi zmdi-edit actions-edit"></i></span>
+                                        <span title="Delete"><i class="zmdi zmdi-delete actions-delete"></i></span>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><input id="box8" type="checkbox" /><label for="box8"></label></td>
-                                    <td>2018-09-29 05:57</td>
-                                    <td>Vivaldi</td>
-                                    <td class="text-right">açıklama</td>
-                                    <td class="text-right">Böyle Bir Servis Yok</td>
+                                    <td>006</td>
+                                    <td>Samsung</td>
+                                    <td>samsunlu@samsung.com</td>
+                                    <td>samsunlu0</td>
+                                    <td>**********<i class="zmdi zmdi-eye actions-eye"></i></td>
+                                    <td>Samsung Account</td>
+                                    <td class="text-right actions-td">
+                                        <span title="Edit"><i class="zmdi zmdi-edit actions-edit"></i></span>
+                                        <span title="Delete"><i class="zmdi zmdi-delete actions-delete"></i></span>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><input id="box9" type="checkbox" /><label for="box9"></label></td>
-                                    <td>2018-09-24 19:10</td>
-                                    <td>Chromium</td>
-                                    <td class="text-right">açıklama</td>
-                                    <td class="text-right">Cilgin Mail</td>
+                                    <td>007</td>
+                                    <td>Netflix</td>
+                                    <td>netflex@netflix.com</td>
+                                    <td>filmstar</td>
+                                    <td>*********<i class="zmdi zmdi-eye actions-eye"></i></td>
+                                    <td>Netflix Account</td>
+                                    <td class="text-right actions-td">
+                                        <span title="Edit"><i class="zmdi zmdi-edit actions-edit"></i></span>
+                                        <span title="Delete"><i class="zmdi zmdi-delete actions-delete"></i></span>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><input id="box10" type="checkbox" /><label for="box10"></label></td>
-                                    <td>2018-09-22 00:43</td>
-                                    <td>Brave</td>
-                                    <td class="text-right">açıklama</td>
-                                    <td class="text-right">Gmail</td>
+                                    <td>008</td>
+                                    <td>Secret</td>
+                                    <td>lastspy@fbi.com</td>
+                                    <td>bestspy</td>
+                                    <td>***********<i class="zmdi zmdi-eye actions-eye"></i></td>
+                                    <td>Work Account</td>
+                                    <td class="text-right actions-td">
+                                        <span title="Edit"><i class="zmdi zmdi-edit actions-edit"></i></span>
+                                        <span title="Delete"><i class="zmdi zmdi-delete actions-delete"></i></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>009</td>
+                                    <td>Twicth</td>
+                                    <td>stream@twicth.com</td>
+                                    <td>streamer</td>
+                                    <td>***********<i class="zmdi zmdi-eye actions-eye"></i></td>
+                                    <td>Twicth Account</td>
+                                    <td class="text-right actions-td">
+                                        <span title="Edit"><i class="zmdi zmdi-edit actions-edit"></i></span>
+                                        <span title="Delete"><i class="zmdi zmdi-delete actions-delete"></i></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>010</td>
+                                    <td>Youtube</td>
+                                    <td>youtube@youtube.com</td>
+                                    <td>youtuber</td>
+                                    <td>**********<i class="zmdi zmdi-eye actions-eye"></i></td>
+                                    <td>Youtube Account</td>
+                                    <td class="text-right actions-td">
+                                        <span title="Edit"><i class="zmdi zmdi-edit actions-edit"></i></span>
+                                        <span title="Delete"><i class="zmdi zmdi-delete actions-delete"></i></span>
+                                    </td>
                                 </tr>
                                 </tbody>
                             </table>
                         </div>
-                    </div>
-                    <div class="form-group form-button">
-                        <input type="submit" name="save" id="save" class="form-submit" style="float: right;" value="Save"/>
                     </div>
                 </div>
             </div>
@@ -243,6 +327,8 @@
 <script src="vendor/jquery-3.2.1.min.js"></script>
 <script src="vendor/bootstrap-4.1/popper.min.js"></script>
 <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+<script src="js/basictable.js"></script>
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
 <script src="vendor/animsition/animsition.min.js"></script>
 <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
 <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
