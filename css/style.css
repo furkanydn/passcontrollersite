@@ -1059,7 +1059,7 @@ h3 {
 .slider_area .single_slider {
     height: 100vh;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #0d0d0d;
     background-position: center;
 }
 
